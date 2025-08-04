@@ -1,8 +1,9 @@
-package com.project.mvc.domain.service.model;
+package com.project.mvc.domain.model;
 
 public class Medidas {
     private double altura;
     private double largura;
+
 
     public Medidas(double altura, double largura) {
         this.altura = altura;
