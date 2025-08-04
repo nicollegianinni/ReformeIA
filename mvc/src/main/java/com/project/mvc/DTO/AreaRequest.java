@@ -18,7 +18,7 @@ public class AreaRequest{
     @Valid
     private List<Medidas> medidas;
 
-    @Positive(message = "O valor do metro quadrado deve ser maior que zero")
+    //se quiser pode passar o valor do metro quadrado da ceramica
     private double valorMetroQuadrado;
 
     public String getTipoSuperficie() {
