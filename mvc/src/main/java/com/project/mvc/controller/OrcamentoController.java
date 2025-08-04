@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/orcamento")
+@RequestMapping("/Orcamento")
 public class OrcamentoController {
     private final CalculoService service;
 
-    public CalculoService(CalculoService service) {
+    public OrcamentoController (CalculoService service) {
         this.service = service;
     }
 
