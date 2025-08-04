@@ -42,10 +42,9 @@ public class PdfGenerator {
             content.setFont(PDType1Font.HELVETICA_BOLD,14);
             content.showText("Area com a margem de erro de 10%: " + String.format("%.2f", response.getAreaTotal() + " m²"));
             content.newLineAtOffset(0, -20);
-            content.showText("Total de caixas: " + response.getTotalCaixas());
+            content.showText("Total de caixas a comprar: " + response.getTotalCaixas());
             content.newLineAtOffset(0, -20);
             content.showText("Custo total estimado: R$ " + String.format("%.2f", response.getCustoTotal()));
-
             content.endText();
             content.close();
 

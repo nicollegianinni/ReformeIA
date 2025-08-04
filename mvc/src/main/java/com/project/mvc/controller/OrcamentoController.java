@@ -1,15 +1,15 @@
 package com.project.mvc.controller;
 
+import ch.qos.logback.core.model.Model;
 import com.project.mvc.DTO.AreaRequest;
+import com.project.mvc.model.Medidas;
 import com.project.mvc.response.AreaResponse;
 import com.project.mvc.service.CalculoService;
 import org.springframework.http.*;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/orcamento")
@@ -20,6 +20,16 @@ public class OrcamentoController {
         this.service = service;
     }
 
+//    @GetMapping("/form")
+//    public String exibirFormulario(Model model) {
+//        // Inicializa o formulário com uma medida vazia para renderizar o input
+//        AreaRequest areaRequest = new AreaRequest();
+//        areaRequest.setMedidas(new ArrayList<>());
+//        areaRequest.getMedidas().add(new Medidas());
+//
+//        model.addAttribute("areaRequest", areaRequest);
+//        return "form-orcamento";
+//    }
     @PostMapping("/calcular")
     public ResponseEntity<AreaResponse> calcular(@Valid @RequestBody AreaRequest request) {
         AreaResponse response = service.calcular(request);
