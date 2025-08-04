@@ -1,7 +1,6 @@
 package com.project.mvc.domain.service.model;
 
 public class Medidas {
-
     private double altura;
     private double largura;
 
