@@ -29,7 +29,7 @@ public class PdfGenerator {
             content.newLineAtOffset(50,700);
             content.showText("Tipo de superficie escolhida: " + request.getTipoSuperficie());
             content.newLineAtOffset(0,-15);
-            content.showText("Valor do M² - R$: " + String.format("%.2", request.getValorMetroQuadrado()));
+            content.showText("Valor do M² - R$: " + String.format("%.2f", request.getValorMetroQuadrado()));
             content.newLineAtOffset(0,-15);
             content.showText("Total de area: : " + request.getMedidas().size());
 

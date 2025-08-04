@@ -1,7 +1,11 @@
 package com.project.mvc.model;
 
+import jakarta.validation.constraints.Positive;
+
 public class Medidas {
+    @Positive(message = "Altura deve ser maior que zero")
     private double altura;
+    @Positive(message = "Largura deve ser maior que zero")
     private double largura;
 
     public Medidas(double altura, double largura) {

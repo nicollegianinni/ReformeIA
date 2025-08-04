@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
-@RequestMapping("/Orcamento")
+@RequestMapping("/orcamento")
 public class OrcamentoController {
     private final CalculoService service;
 
@@ -19,7 +21,7 @@ public class OrcamentoController {
     }
 
     @PostMapping("/calcular")
-    public ResponseEntity<AreaResponse> calcular(@RequestBody AreaRequest request) {
+    public ResponseEntity<AreaResponse> calcular(@Valid @RequestBody AreaRequest request) {
         AreaResponse response = service.calcular(request);
         return ResponseEntity.ok(response);
     }
